@@ -8,6 +8,8 @@ tqdm
 boto3
 requests
 regex
+torch
+ipython
 
 # install some pip packages needed for testing
 # argcomplete 

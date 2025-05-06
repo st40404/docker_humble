@@ -86,7 +86,6 @@ RUN echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc
 
 # * Switch workspace to ~/work
 WORKDIR /home/"${USER}"/work
-RUN echo "source ~/work/install/setup.bash"  >> ~/.bashrc
 
 # * Make SSH available
 EXPOSE 22
