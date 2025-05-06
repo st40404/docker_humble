@@ -1,5 +1,4 @@
 # install python dep
-tf
 numpy-quaternion
 
 # BERT

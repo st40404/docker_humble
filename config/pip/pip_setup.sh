@@ -5,4 +5,4 @@
 file_dir=$(dirname "$(readlink -f "${0}")")
 
 pip install --upgrade --force-reinstall pip \
-&& pip install -r "${file_dir}"/requirements.txt
+&& pip install --upgrade --ignore-installed -r "${file_dir}"/requirements.txt
