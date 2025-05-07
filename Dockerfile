@@ -69,6 +69,15 @@ RUN apt update \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
+# * Install terminal font format of chinese character
+RUN apt update && \
+    apt install -y --no-install-recommends \
+        # fonts-firacode \
+        fonts-noto-cjk \
+    && fc-cache -fv \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN ./config/pip/pip_setup.sh
 
 ############################## USER CONFIG ####################################
