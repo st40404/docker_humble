@@ -9,6 +9,7 @@ requests
 regex
 torch
 ipython
+pandas
 
 # install some pip packages needed for testing
 # argcomplete 
