@@ -10,6 +10,7 @@ regex
 torch
 ipython
 pandas
+pysnooper
 
 # install some pip packages needed for testing
 # argcomplete 
