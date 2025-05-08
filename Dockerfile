@@ -10,8 +10,8 @@ ARG HARDWARE=x86_64
 ARG ENTRYPOINT_FILE=entrypint.sh
 
 # * Env vars for the nvidia-container-runtime.
-ENV NVIDIA_VISIBLE_DEVICES all
-ENV NVIDIA_DRIVER_CAPABILITIES all
+ENV NVIDIA_VISIBLE_DEVICES=all
+ENV NVIDIA_DRIVER_CAPABILITIES=all
 # ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
 
 # * Setup users and groups
