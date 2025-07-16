@@ -11,6 +11,7 @@ docker build -t "${DOCKER_HUB_USER}"/"${IMAGE}" \
     --build-arg GID="${gid}" \
     --build-arg HARDWARE="${hardware}" \
     --build-arg ENTRYPOINT_FILE="${ENTRYPOINT_FILE}" \
+    --network=host \
     -f "${FILE_DIR}"/"${DOCKERFILE_NAME}" "${FILE_DIR}"
 
 #     --progress=plain \
