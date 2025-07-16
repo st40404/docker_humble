@@ -9,3 +9,9 @@ pip install --upgrade --force-reinstall pip \
 # install unsloth package for pretrain llama 3
 pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" && \
 pip install --no-deps xformers "trl<0.9.0" peft accelerate bitsandbytes
+
+# using Unsloth to download model need newer version of pillowc
+pip install --upgrade Pillow
+# load_in_4bit need to install bitsandbytes package
+pip install bitsandbytes
+
