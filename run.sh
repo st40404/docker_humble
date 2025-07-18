@@ -17,5 +17,6 @@ docker run --rm \
     -v /etc/localtime:/etc/localtime:ro \
     -v /dev:/dev \
     -v "${WS_PATH}":/home/"${user}"/work \
+    -v ~/.cache/huggingface:/home/"${user}"/.cache/huggingface \
     -it --name "${CONTAINER}" "${DOCKER_HUB_USER}"/"${IMAGE}"
 

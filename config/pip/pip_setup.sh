@@ -6,9 +6,10 @@ file_dir=$(dirname "$(readlink -f "${0}")")
 
 pip install --upgrade --force-reinstall pip \
 && pip install --upgrade --ignore-installed -r "${file_dir}"/requirements.txt \
-# install unsloth package for pretrain llama 3
+
+# install unsloth package for pretrain llama
 pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git" && \
-pip install --no-deps xformers "trl<0.9.0" peft accelerate bitsandbytes
+pip install --no-deps xformers "trl<0.9.0" peft accelerate bitsandbytes datasets
 
 # using Unsloth to download model need newer version of pillowc
 pip install --upgrade Pillow

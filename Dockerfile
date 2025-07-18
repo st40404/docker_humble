@@ -66,6 +66,8 @@ RUN apt update \
         # Editing tools
         nano vim gedit \
         gnome-terminal libcanberra-gtk-module libcanberra-gtk3-module \
+        # debug for terminator
+        gir1.2-keybinder-3.0 \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -92,6 +94,10 @@ RUN export CXX=g++
 RUN export MAKEFLAGS="-j nproc"
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 RUN echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc
+
+# give permisstion to .cache file for mount to local .cache hugging face
+RUN mkdir -p /home/ron/.cache && \
+    chown -R ${USER}:${USER} /home/${USER}/.cache
 
 # * Switch workspace to ~/work
 WORKDIR /home/"${USER}"/work
